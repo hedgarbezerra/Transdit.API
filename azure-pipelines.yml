@@ -1,0 +1,70 @@
+trigger:
+- master
+- develop
+
+pool:
+  vmImage: 'windows-latest'
+
+variables:
+  solution: '**/*.sln'
+  buildPlatform: 'Any CPU'
+  buildConfiguration: 'Release'
+
+#define pipeline version
+name: 1.0.$(Rev:r).$(date:yyyyMMdd)
+jobs:
+- job: BuildAndTest
+  displayName: Build, Unit tests and Quality check
+  steps:
+  - task: NuGetToolInstaller@1
+
+  - task: SonarCloudPrepare@1
+    displayName: 'Configuring SonarCloud'
+    inputs:
+      SonarCloud: 'Transdit SonarCloud'
+      organization: 'hedgarpdm'
+      scannerMode: 'MSBuild'
+      projectKey: 'hedgarpdm_Transdit.API'
+      projectName: 'Transdit API'
+
+  - task: NuGetCommand@2
+    displayName: 'Restoring dependencies'
+    inputs:
+      restoreSolution: '$(solution)'
+
+  - task: VSBuild@1
+    displayName: 'Building solution'
+    inputs:
+      solution: '$(solution)'
+      msbuildArgs: '/p:DeployOnBuild=true /p:WebPublishMethod=Package /p:PackageAsSingleFile=true /p:SkipInvalidConfigurations=true /p:DesktopBuildPackageLocation="$(build.artifactStagingDirectory)\WebApp.zip" /p:DeployIisAppPath="Default Web Site"'
+      platform: '$(buildPlatform)'
+      configuration: '$(buildConfiguration)'
+
+  - task: DotNetCoreCLI@2
+    displayName: 'Running Unit tests'
+    inputs:
+      command: test
+      projects: '**/*Tests*.csproj'
+      arguments: '--configuration $(buildConfiguration) --collect "Code Coverage"'
+
+  - task: DotNetCoreCLI@2
+    displayName: Publish
+    inputs:
+      command: publish
+      publishWebProjects: true
+      projects: '**/*.sln'
+      arguments: '--configuration $(BuildConfiguration) --output "$(build.artifactstagingdirectory)"'
+      zipAfterPublish: True
+
+  - task: PublishBuildArtifacts@1
+    displayName: 'Publish Artifact'
+    inputs:
+      artifactName: WebApp
+      PathtoPublish: '$(build.artifactstagingdirectory)'
+  - task: SonarCloudAnalyze@1
+    displayName: 'Running Code Analysis'
+
+  - task: SonarCloudPublish@1
+    inputs:
+      pollingTimeoutSec: '300'
+

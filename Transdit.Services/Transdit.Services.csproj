@@ -1,0 +1,44 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Globalization\**" />
+    <EmbeddedResource Remove="Globalization\**" />
+    <None Remove="Globalization\**" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="AutoMapper" Version="12.0.1" />
+    <PackageReference Include="Azure.Communication.Email" Version="1.0.0" />
+    <PackageReference Include="FluentValidation" Version="11.5.2" />
+    <PackageReference Include="Google.Apis.Auth" Version="1.60.0" />
+    <PackageReference Include="Google.Cloud.Speech.V1" Version="3.4.0" />
+    <PackageReference Include="Google.Cloud.Storage.V1" Version="4.4.0" />
+    <PackageReference Include="HtmlAgilityPack" Version="1.11.46" />
+    <PackageReference Include="HtmlRenderer.PdfSharp" Version="1.5.0.5" />
+    <PackageReference Include="MailKit" Version="3.6.0" />
+    <PackageReference Include="MediaToolkit" Version="1.1.0.1" />
+    <PackageReference Include="Microsoft.AspNetCore.Identity" Version="2.2.0" />
+    <PackageReference Include="Microsoft.AspNetCore.WebUtilities" Version="2.2.0" />
+    <PackageReference Include="Microsoft.Extensions.Localization" Version="6.0.16" />
+    <PackageReference Include="Microsoft.Extensions.Localization.Abstractions" Version="6.0.16" />
+    <PackageReference Include="Microsoft.Identity.Client" Version="4.54.1" />
+    <PackageReference Include="MimeKit" Version="3.6.1" />
+    <PackageReference Include="NPOI" Version="2.6.0" />
+    <PackageReference Include="RestSharp" Version="110.1.0" />
+    <PackageReference Include="YoutubeExplode" Version="6.2.12" />
+    <PackageReference Include="YoutubeExplode.Converter" Version="6.2.12" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Transdit.Core\Transdit.Core.csproj" />
+    <ProjectReference Include="..\Transdit.Repository\Transdit.Repository.csproj" />
+    <ProjectReference Include="..\Transdit.Utilities\Transdit.Utilities.csproj" />
+  </ItemGroup>
+
+</Project>

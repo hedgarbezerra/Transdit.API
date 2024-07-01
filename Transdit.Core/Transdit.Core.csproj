@@ -1,0 +1,16 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net6.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Google.Apis.Storage.v1" Version="1.60.0.2742" />
+    <PackageReference Include="Google.Cloud.Speech.V1" Version="3.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Identity.Stores" Version="6.0.15" />
+    <PackageReference Include="YoutubeExplode" Version="6.2.12" />
+  </ItemGroup>
+
+</Project>

@@ -1,0 +1,61 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.4.33110.190
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.API", "Transdit.API\Transdit.API.csproj", "{129D9B81-1F49-49C5-8AD7-CCDE008C6FDC}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.Repository", "Transdit.Repository\Transdit.Repository.csproj", "{F604AC61-A419-49EB-A594-C82347784768}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.Services", "Transdit.Services\Transdit.Services.csproj", "{FEC4B539-9221-4393-8229-63974BC72A05}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.Utilities", "Transdit.Utilities\Transdit.Utilities.csproj", "{28AD2625-0C4A-4968-A5EE-C67C907148C1}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.Tests", "Transdit.Tests\Transdit.Tests.csproj", "{171A2426-481B-41C8-8E20-F993B1BE3E63}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Transdit.Core", "Transdit.Core\Transdit.Core.csproj", "{4C094F3F-7E64-4AE5-9094-6ADD6F37ECE0}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{CE965D53-2547-4E1A-8BD7-563D1C7C22B0}"
+	ProjectSection(SolutionItems) = preProject
+		.editorconfig = .editorconfig
+	EndProjectSection
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{129D9B81-1F49-49C5-8AD7-CCDE008C6FDC}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{129D9B81-1F49-49C5-8AD7-CCDE008C6FDC}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{129D9B81-1F49-49C5-8AD7-CCDE008C6FDC}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{129D9B81-1F49-49C5-8AD7-CCDE008C6FDC}.Release|Any CPU.Build.0 = Release|Any CPU
+		{F604AC61-A419-49EB-A594-C82347784768}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F604AC61-A419-49EB-A594-C82347784768}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F604AC61-A419-49EB-A594-C82347784768}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F604AC61-A419-49EB-A594-C82347784768}.Release|Any CPU.Build.0 = Release|Any CPU
+		{FEC4B539-9221-4393-8229-63974BC72A05}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{FEC4B539-9221-4393-8229-63974BC72A05}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{FEC4B539-9221-4393-8229-63974BC72A05}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{FEC4B539-9221-4393-8229-63974BC72A05}.Release|Any CPU.Build.0 = Release|Any CPU
+		{28AD2625-0C4A-4968-A5EE-C67C907148C1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{28AD2625-0C4A-4968-A5EE-C67C907148C1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{28AD2625-0C4A-4968-A5EE-C67C907148C1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{28AD2625-0C4A-4968-A5EE-C67C907148C1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{171A2426-481B-41C8-8E20-F993B1BE3E63}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{171A2426-481B-41C8-8E20-F993B1BE3E63}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{171A2426-481B-41C8-8E20-F993B1BE3E63}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{171A2426-481B-41C8-8E20-F993B1BE3E63}.Release|Any CPU.Build.0 = Release|Any CPU
+		{4C094F3F-7E64-4AE5-9094-6ADD6F37ECE0}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{4C094F3F-7E64-4AE5-9094-6ADD6F37ECE0}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{4C094F3F-7E64-4AE5-9094-6ADD6F37ECE0}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{4C094F3F-7E64-4AE5-9094-6ADD6F37ECE0}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		RESX_PrefixTranslations = False
+		SolutionGuid = {50B9DD0D-0E97-4CA2-B716-C38CDE21EE07}
+	EndGlobalSection
+EndGlobal
